@@ -1,9 +1,24 @@
-/* wa1tnr 04 Aug 2023 12:06z */
-/* Fri  4 Aug 15:02:12 UTC 2023 */
+/* wa1tnr 04 Aug 2023 22:25z */
+/* Fri Aug  4 22:25:02 UTC 2023 */
 
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
 /* not much taken from it, just 0x04 vs 0x24 for DDRB &c */
+
+/*
+   trying 4 Aug 21:59 UTC 2023:
+
+   http://www.rjhcoding.com/avr-asm-tutorials.php
+
+   "AVRASM2 is the official Atmel assembler"
+
+*/
+
+// .include "m328pdef.inc"
+// https://github.com/DarkSector/AVR/blob/master/asm/include/m328Pdef.inc
+
+
+// #include "avr/io.h"  // uri shaked used this
 
 .equ nDDRB,  0x04 /* 0x24 */
 .equ nPORTB, 0x05 /* 0x25 */ /* 13.4.2 */
@@ -116,7 +131,15 @@ led_08_OFF:
 	out  nPORTB, r17
   ret
 
+sp_ini:
+  // ldi	r16,LOW(RAMEND)
+	// out	SPL,r16
+	// ldi	r16,HIGH(RAMEND)
+	// out	SPH,r16
+  ret
+
 start:
+  call sp_ini
   call output_mode_select_gpio
 	call delay_ms
 	ret
