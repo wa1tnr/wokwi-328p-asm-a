@@ -1,13 +1,10 @@
-0.1.0-pre-alpha READY.FOR.RELEASE
+0.1.1-pre-alpha READY.FOR.RELEASE
 
-last commit 1679e8ea7ca531dcfd930fb7d2e67aa001c4bfce
+last commit 081bb21a28e11f052aa3ab548d95d716679e401f
 
-Date:   Sun Apr  9 15:30:18 UTC 2023
+Date:   Fri Aug  4 12:25:26 UTC 2023
 
-    disassembly - wokwi provides this
+    wokwi capture from git repo source
     
-      nice disassembled version of this program.
-    
-            new file:   sketch.lst
-    
-    On branch dvlp-aa
+            modified:   README.md
+            modified:   blink_328p-a/README.md
