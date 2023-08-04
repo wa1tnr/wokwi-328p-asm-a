@@ -1,7 +1,7 @@
-# wokwi-rp2040-asm-a
+# wokwi-328p-asm-a
 
-#### Sun  9 Apr 15:03:05 UTC 2023
+#### Fri  4 Aug 12:06:52 UTC 2023
 
-## wokwi hosted assembly language for RP2040 - early effort - 9 Apr 2023
+## wokwi hosted assembly language for Atmel 328p - early effort - 4 Aug 2023
 
 END.

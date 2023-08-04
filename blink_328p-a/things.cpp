@@ -1,4 +1,5 @@
 /* wa1tnr 04 Aug 2023 06:15z */
+/*i Fri  4 Aug 12:06:52 UTC 2023 */
 
 #include <Arduino.h>
 
@@ -6,7 +7,7 @@
 extern "C" {
 #endif
    void start();
-   void xpMain();
+   void vmain();
 #ifdef __cplusplus
 }
 #endif
@@ -21,11 +22,11 @@ void setup(void) {
   Serial.print("  start();  ");
   start();
   delay(1000);
-  Serial.print("  xpMain();  ");
+  Serial.print("  vmain();  ");
 }
 
 void loop(void) {
-  xpMain();
+  vmain();
   Serial.write('.');
 }
 

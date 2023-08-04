@@ -1,4 +1,5 @@
-/* wa1tnr 04 Aug 2023 06:15z */
+/* wa1tnr 04 Aug 2023 12:06z */
+/* Fri  4 Aug 12:06:52 UTC 2023 */
 
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
@@ -14,7 +15,7 @@
 .equ PB4_PB5, 0x20 | 0x10  */  /* experimental - syntax? */
 
 .global start
-.global xpMain
+.global vmain
 
 output_mode_gpio:
 	ldi r17, PB4 /* PB5 seems to get initialized elsewhere */
@@ -43,7 +44,7 @@ start:
 	call bDelay
 	ret
 
-xpMain:
+vmain:
   call led_13_ON
 	call bDelay
   call all_leds_OFF
