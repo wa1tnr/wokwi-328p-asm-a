@@ -2,6 +2,11 @@
 
 ## latest:
 
+Updated moments afte the below 'Progress!' report. ;)
+
+  https://wokwi.com/projects/372170908061497345
+
+
 Progress!  Found the diaspora upstream stuff and the
 compatibility issues arising.
 
