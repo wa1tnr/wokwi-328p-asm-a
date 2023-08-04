@@ -14,6 +14,17 @@ extern "C" {
 
 void setup_serial(void) {
   Serial.begin(9600);
+  int p = 1 << PORTB5;
+  Serial.print(p, HEX);
+
+  Serial.write(' ');
+
+  p = 1 << PB5;
+  Serial.print(p, HEX);
+
+  Serial.write(' ');
+  Serial.write('D'); Serial.write(' ');
+  Serial.print(DDRB, HEX);
 }
 
 void setup(void) {

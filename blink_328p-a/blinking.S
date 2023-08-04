@@ -8,7 +8,7 @@
 .equ nDDRB,  0x04 /* 0x24 */
 .equ nPORTB, 0x05 /* 0x25 */ /* 13.4.2 */
 
-.equ nPB5, 0x20 // D13
+.equ nPB5, 0x20 // D13  '1 << PORTB5'  or '1 << PB5'
 .equ nPB4, 0x10 // D12
 .equ nPB3, 0x08 // D11
 .equ nPB2, 0x04 // D10
