@@ -2,13 +2,19 @@
 
 ## latest:
 
+PB5 was already spoken for and did not notice.
+Changed them all to an lc 'n' prefix, but did not
+do exhaustive search for these.
+
+  https://wokwi.com/projects/372152879278481409
+
+
+older:
+
 Good.  LEDs blink individually.  Experimented a lot
 with the syntax to do so.
 
   https://wokwi.com/projects/372142687446556673
-
-
-older:
 
   https://wokwi.com/projects/372132232507879425
 
@@ -18,3 +24,4 @@ older:
   in synchronization. ;)
 
 ## END.
+
