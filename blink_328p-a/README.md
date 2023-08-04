@@ -1,6 +1,14 @@
-# Fri Aug 4 18:40:42 UTC 2023
+# Fri Aug  4 22:25:02 UTC 2023
 
 ## latest:
+
+Progress!  Found the diaspora upstream stuff and the
+compatibility issues arising.
+
+  https://wokwi.com/projects/372169757470559233
+
+
+older:
 
 Sorting this a bit.  Some printing in the serial setup.
 
@@ -14,7 +22,6 @@ do exhaustive search for these.
   https://wokwi.com/projects/372152879278481409
 
 
-older:
 
 Good.  LEDs blink individually.  Experimented a lot
 with the syntax to do so.
@@ -29,4 +36,3 @@ with the syntax to do so.
   in synchronization. ;)
 
 ## END.
-

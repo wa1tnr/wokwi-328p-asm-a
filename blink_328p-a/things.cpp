@@ -1,5 +1,5 @@
-/* wa1tnr 04 Aug 2023 06:15z */
-/*i Fri  4 Aug 12:06:52 UTC 2023 */
+/* wa1tnr 04 Aug 2023 22:25z */
+/* Fri Aug  4 22:25:02 UTC 2023 */
 
 #include <Arduino.h>
 
@@ -27,10 +27,15 @@ void setup_serial(void) {
   Serial.print(DDRB, HEX);
 }
 
+int jjj = 0xa5;
+
 void setup(void) {
   setup_serial();
   Serial.print(" IN setup();\n");
   Serial.print("  start();  ");
+  
+  jjj = 0x5a;
+
   start();
   delay(1000);
   Serial.print("  vmain();  ");
