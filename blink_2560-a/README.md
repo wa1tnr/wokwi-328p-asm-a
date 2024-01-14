@@ -4,6 +4,10 @@
 
   ATMega 2560:
 
+  bounce-back tested 09:15z:
+  https://wokwi.com/projects/386887722864670721
+
+
   a few revisions saved no real changes, ends on:
   https://wokwi.com/projects/386886127887171585
 
