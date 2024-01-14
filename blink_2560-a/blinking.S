@@ -1,4 +1,6 @@
-/* wa1tnr  Sun 14 Jan 03:41:38 UTC 2024 */
+/* wa1tnr  Sun 14 Jan 08:44:07 UTC 2024 */
+
+/* all eight port pins of PORTB (PB0 thru PB7) now in use! */
 
 /* clumsy use of OR - but feels comfortable now to work with the */
 /* declared CALLs. */
@@ -12,16 +14,22 @@
 .equ PORTB, 0x05  /* 0x25 */ /* 13.4.2 */
 
 .equ PB7, 0x80 // D13
+.equ PB6, 0x40 // D12
 .equ PB5, 0x20 // D11
+.equ PB4, 0x10 // D10 // was: D10
 
+.equ PB3, 0x08 // D50 // was: D9
+.equ PB2, 0x04 // D51 // was: D8
+.equ PB1, 0x02 // D52
+.equ PB0, 0x01 // D53
 
 .global start
 .global vmain
 
 output_mode_gpio:
-  ldi r17, (PB7)|(PB5)
+  ldi r17, (PB7)|(PB6)|(PB5)|(PB4)|(PB3)|(PB2)|(PB1)|(PB0)
   out DDRB, r17
-  ldi r17, (PB7)|(PB5)
+  ldi r17, (PB7)|(PB6)|(PB5)|(PB4)|(PB3)|(PB2)|(PB1)|(PB0)
   out PORTB, r17
   ret
 
@@ -29,6 +37,7 @@ output_mode_gpio:
 // tutorial:
 
 // http://www.rjhcoding.com/avr-asm-registers.php
+
 
 led_D13_ON:
   ldi r17, PB7
@@ -45,7 +54,22 @@ led_D13_OFF:
   out PORTB, r17
   ret
 
-led_D11_ON:  
+led_D12_ON:
+  ldi r17, PB6
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D12_OFF:
+  ldi r17, PB6
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D11_ON:
   ldi r17, PB5
   in  r16, PINB
   or  r17, r16
@@ -54,6 +78,81 @@ led_D11_ON:
 
 led_D11_OFF:
   ldi r17, PB5
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D10_ON:
+  ldi r17, PB4
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D10_OFF:
+  ldi r17, PB4
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D50_ON:
+  ldi r17, PB3
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D50_OFF:
+  ldi r17, PB3
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D51_ON:
+  ldi r17, PB2
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D51_OFF:
+  ldi r17, PB2
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D52_ON:
+  ldi r17, PB1
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D52_OFF:
+  ldi r17, PB1
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D53_ON:
+  ldi r17, PB0
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D53_OFF:
+  ldi r17, PB0
   com r17
   in  r16, PINB
   and r17, r16
@@ -104,18 +203,14 @@ led_D11_PB5_ON:
 	ret
 
 start:
+
   call output_mode_gpio
-// call selected_LEDS_off
-  nop
-  call led_D13_ON
-  nop
-  call led_D13_OFF
-  nop
-  call led_D11_ON
-  nop
-  call led_D11_OFF
-  nop
   call bDelay
+  call bDelay
+  call bDelay
+  call bDelay
+  call bDelay
+
 	ret
 
 all_leds_ON:
@@ -131,10 +226,57 @@ vmain:
   call bDelay
   call bDelay
 
+  call led_D12_ON
+  call bDelay
+  call bDelay
+  call led_D12_OFF
+  call bDelay
+  call bDelay
+
   call led_D11_ON
   call bDelay
   call bDelay
   call led_D11_OFF
+  call bDelay
+  call bDelay
+
+  call led_D10_ON
+  call bDelay
+  call bDelay
+  call led_D10_OFF
+  call bDelay
+  call bDelay
+
+  call led_D50_ON
+  call bDelay
+  call bDelay
+  call led_D50_OFF
+  call bDelay
+  call bDelay
+
+  call led_D51_ON
+  call bDelay
+  call bDelay
+  call led_D51_OFF
+  call bDelay
+  call bDelay
+
+  call led_D52_ON
+  call bDelay
+  call bDelay
+  call led_D52_OFF
+  call bDelay
+  call bDelay
+
+  call led_D53_ON
+  call bDelay
+  call bDelay
+  call led_D53_OFF
+  call bDelay
+  call bDelay
+  call bDelay
+  call bDelay
+  call bDelay
   call bDelay
   call bDelay
   ret
