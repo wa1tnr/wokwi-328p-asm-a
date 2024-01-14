@@ -12,6 +12,8 @@
   ATMega 2560:
 
   latest:
+  https://wokwi.com/projects/386912133922745345
+
   https://wokwi.com/projects/386866832786825217
 
   older:
