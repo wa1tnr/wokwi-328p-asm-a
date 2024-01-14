@@ -1,0 +1,3 @@
+
+  /some/path/to/.platformio/platforms/atmelavr/boards/ATmega2560.json
+
