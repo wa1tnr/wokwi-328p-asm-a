@@ -1,18 +1,21 @@
-#### Sun 14 Jan 13:54:26 UTC 2024
+#### Sun 14 Jan 15:15:15 UTC 2024
 
 ## solid program.  14 Jan 2024.
 
-  Online version supercedes this git version:
-
-  https://wokwi.com/projects/386910684299892737
+#### now as in now: Sun 14 Jan 15:24:11 UTC 2024
 
   ATMega 2560:
 
   latest work (+pio +wokwi_proven):
+  https://wokwi.com/projects/386911008933799937
 
+  with an error:
+  https://wokwi.com/projects/386910684299892737
+
+
+  older:
   https://wokwi.com/projects/386905436315146241
-
-
+  
   https://wokwi.com/projects/386905237448504321
 
   reduced times 09:26z Sun 14 Jan 2024:
@@ -20,7 +23,6 @@
 
   bounce-back tested 09:15z:
   https://wokwi.com/projects/386887722864670721
-
 
   a few revisions saved no real changes, ends on:
   https://wokwi.com/projects/386886127887171585
