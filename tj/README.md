@@ -1,8 +1,16 @@
-#### Sun 14 Jan 08:50:47 UTC 2024
+#### Sun 14 Jan 13:54:26 UTC 2024
 
 ## solid program.  14 Jan 2024.
 
   ATMega 2560:
+
+  latest work (+pio +wokwi_proven):
+
+  https://wokwi.com/projects/386905436315146241
+
+
+  https://wokwi.com/projects/386905237448504321
+
   reduced times 09:26z Sun 14 Jan 2024:
   https://wokwi.com/projects/386888443979857921
 
