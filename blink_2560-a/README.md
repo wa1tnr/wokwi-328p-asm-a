@@ -3,6 +3,8 @@
 ## solid program.  14 Jan 2024.
 
   ATMega 2560:
+  reduced times 09:26z Sun 14 Jan 2024:
+  https://wokwi.com/projects/386888443979857921
 
   bounce-back tested 09:15z:
   https://wokwi.com/projects/386887722864670721
