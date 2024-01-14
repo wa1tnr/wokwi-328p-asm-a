@@ -5,11 +5,15 @@
 
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
-.equ DDRB, 0x04  /* 0x24 */
-.equ PORTB, 0x05 /* 0x25 */ /* 13.4.2 */
+/* https://www.avrfreaks.net/s/topic/a5C3l000000Ua5lEAC/t152531 */
+
+.equ PINB,  0x03  /* 0x23 */
+.equ DDRB,  0x04  /* 0x24 */
+.equ PORTB, 0x05  /* 0x25 */ /* 13.4.2 */
 
 .equ PB7, 0x80 // D13
 .equ PB5, 0x20 // D11
+
 
 .global start
 .global vmain
@@ -18,6 +22,41 @@ output_mode_gpio:
   ldi r17, (PB7)|(PB5)
   out DDRB, r17
   ldi r17, (PB7)|(PB5)
+  out PORTB, r17
+  ret
+
+
+// tutorial:
+
+// http://www.rjhcoding.com/avr-asm-registers.php
+
+led_D13_ON:
+  ldi r17, PB7
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D13_OFF:
+  ldi r17, PB7
+  com r17
+  in  r16, PINB
+  and r17, r16
+  out PORTB, r17
+  ret
+
+led_D11_ON:  
+  ldi r17, PB5
+  in  r16, PINB
+  or  r17, r16
+  out PORTB, r17
+  ret
+
+led_D11_OFF:
+  ldi r17, PB5
+  com r17
+  in  r16, PINB
+  and r17, r16
   out PORTB, r17
   ret
 
@@ -66,38 +105,39 @@ led_D11_PB5_ON:
 
 start:
   call output_mode_gpio
-  call selected_LEDS_off
+// call selected_LEDS_off
+  nop
+  call led_D13_ON
+  nop
+  call led_D13_OFF
+  nop
+  call led_D11_ON
+  nop
+  call led_D11_OFF
+  nop
   call bDelay
 	ret
+
+all_leds_ON:
+  call led_D13_ON
+  call led_D11_ON
+  ret
 
 vmain:
-  call led_D13_PB7_ON_D11_PB5_ON
+  call led_D13_ON
   call bDelay
   call bDelay
-  call bDelay
-  call bDelay
-
-  call led_D13_PB7_OFF_led_D11_PB5_ON
-  call bDelay
-	call bDelay
-	call bDelay
-
-  call led_D13_PB7_ON_led_D11_PB5_OFF
-  call bDelay
-	call bDelay
-  call bDelay
-  call bDelay
+  call led_D13_OFF
   call bDelay
   call bDelay
 
-  call led_D13_PB7_OFF_D11_PB5_OFF
-
+  call led_D11_ON
   call bDelay
   call bDelay
+  call led_D11_OFF
   call bDelay
   call bDelay
-
-	ret
+  ret
 
 bDelay:
   call cDelay

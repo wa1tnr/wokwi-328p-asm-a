@@ -1,8 +1,12 @@
-#### Sun 14 Jan 04:34:10 UTC 2024
+#### Sun 14 Jan 07:11:07 UTC 2024
 
 ## solid program.  14 Jan 2024.
 
   ATMega 2560:
+
+  more solid use of com or and &c. here:
+
+  https://wokwi.com/projects/386879831463775233
 
   proof (bounceback git > wokwi last step):
   https://wokwi.com/projects/386869812993004545
