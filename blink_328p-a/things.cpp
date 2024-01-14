@@ -1,4 +1,5 @@
-/* wa1tnr - Sun 14 Jan 03:41:38 UTC 2024 */
+/* wa1tnr 04 Aug 2023 06:15z */
+/*i Fri  4 Aug 12:06:52 UTC 2023 */
 
 #include <Arduino.h>
 
@@ -16,7 +17,6 @@ void setup_serial(void) {
 }
 
 void setup(void) {
-  pinMode(12, OUTPUT); // cheating! no asm
   setup_serial();
   Serial.print(" IN setup();\n");
   Serial.print("  start();  ");
@@ -26,8 +26,8 @@ void setup(void) {
 }
 
 void loop(void) {
-  Serial.write('.');
   vmain();
+  Serial.write('.');
 }
 
 // end.
