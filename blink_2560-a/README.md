@@ -1,8 +1,11 @@
-#### Sun 14 Jan 08:25:42 UTC 2024
+#### Sun 14 Jan 08:50:47 UTC 2024
 
 ## solid program.  14 Jan 2024.
 
   ATMega 2560:
+
+  a few revisions saved no real changes, ends on:
+  https://wokwi.com/projects/386886127887171585
 
   looking good at 08:25 UTC for Sunday 14 Jan 2024:
 
