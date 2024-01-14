@@ -1,12 +1,16 @@
-#### Sun 14 Jan 15:37:46 UTC 2024
+#### Sun 14 Jan 18:54:48 UTC 2024
 
 ## solid program.  14 Jan 2024.
 
-#### now as in now: Sun 14 Jan 15:45:23 UTC 2024
+#### now as in now: Sun 14 Jan 18:54:30 UTC 2024
 
   ATMega 2560:
 
   latest work (+pio +wokwi_proven):
+
+  https://wokwi.com/projects/386924107515154433
+
+
   https://wokwi.com/projects/386912133922745345
 
   https://wokwi.com/projects/386911008933799937
