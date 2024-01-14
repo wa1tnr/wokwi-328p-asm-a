@@ -1,7 +1,5 @@
 /* wa1tnr  Sun 14 Jan 15:37:46 UTC 2024 */
 
-/* blinking.S - modified for fast LED blinking */
-
 /* all eight port pins of PORTB (PB0 thru PB7) now in use! */
 
 /* clumsy use of OR - but feels comfortable now to work with the */
@@ -308,7 +306,6 @@ uDelay:
 
 vDelay:
     call wDelay
-/*
     call wDelay
     call wDelay
     call wDelay
@@ -316,12 +313,11 @@ vDelay:
     call wDelay
     call wDelay
     call wDelay
-    call wDelay */
+    call wDelay
     ret
 
 wDelay:
     call xDelay
-    /*
     call xDelay
     call xDelay
     call xDelay
@@ -329,12 +325,11 @@ wDelay:
     call xDelay
     call xDelay
     call xDelay
-    call xDelay */
+    call xDelay
     ret
 
 xDelay:
     nop
-    /*
     nop
     nop
     nop
@@ -342,7 +337,6 @@ xDelay:
     nop
     nop
     nop
-    */
     ret
 
 /* end */
