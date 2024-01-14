@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+gdbServerPort = 3333
+elf = ".pio/build/ATmega2560/firmware.elf"
+firmware = ".pio/build/ATmega2560/firmware.elf"
