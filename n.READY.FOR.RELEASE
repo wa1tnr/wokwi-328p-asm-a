@@ -1,10 +1,7 @@
-0.1.1-pre-alpha READY.FOR.RELEASE
+0.1.2-pre-alpha READY.FOR.RELEASE
 
-last commit 081bb21a28e11f052aa3ab548d95d716679e401f
+last commit 516dc4983674ec7c151c51594cc3e3e05c3aaff7
 
-Date:   Fri Aug  4 12:25:26 UTC 2023
+Date:   Sun Jan 14 16:10:04 UTC 2024
 
-    wokwi capture from git repo source
-    
-            modified:   README.md
-            modified:   blink_328p-a/README.md
+    Possibly LAST commit before pre-release tagging
