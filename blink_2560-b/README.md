@@ -2,6 +2,10 @@
 
 ## solid program.  14 Jan 2024.
 
+  Online version supercedes this git version:
+
+  https://wokwi.com/projects/386910684299892737
+
   ATMega 2560:
 
   latest work (+pio +wokwi_proven):
