@@ -1,5 +1,12 @@
 # wokwi-328p-asm-a
 
+  328p:
+  RE-PROVEN 14 Jan 2024:
+
+  https://wokwi.com/projects/386871620359538689
+
+  Conflated copies - must fix!  This is from branch main.
+
 #### Sun 14 Jan 03:41:38 UTC 2024
 
   ATMega 2560:
