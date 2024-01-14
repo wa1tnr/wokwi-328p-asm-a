@@ -1,17 +1,25 @@
 # wokwi-328p-asm-a
 
-  328p:
+#### LATEST work: atmega2560, January 2024 (scroll)
+
+
+### 328p:
+
   RE-PROVEN 14 Jan 2024:
 
   https://wokwi.com/projects/386871620359538689
 
   Conflated copies - must fix!  This is from branch main.
 
-#### Sun 14 Jan 03:41:38 UTC 2024
+#### Sun 14 Jan 18:54:48 UTC 2024
 
   ATMega 2560:
 
-  latest:
+  latest (19:12 UTC Sun 14 Jan 2024)
+
+  https://wokwi.com/projects/386925176149415937
+  
+  
   https://wokwi.com/projects/386912133922745345
 
   https://wokwi.com/projects/386866832786825217
