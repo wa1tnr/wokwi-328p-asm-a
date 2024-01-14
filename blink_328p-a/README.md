@@ -1,6 +1,11 @@
-#### Sun 14 Jan 03:41:38 UTC 2024
+#### Sun 14 Jan 04:34:10 UTC 2024
+
+## solid program.  14 Jan 2024.
 
   ATMega 2560:
+
+  proof (bounceback git > wokwi last step):
+  https://wokwi.com/projects/386869812993004545
 
   latest:
   https://wokwi.com/projects/386866832786825217
