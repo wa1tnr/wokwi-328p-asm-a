@@ -3,158 +3,138 @@
   "author": "wa1tnr - Fri  4 Aug 12:06:52 UTC 2023",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-arduino-uno", "id": "uno", "top": 18.79, "left": 0.31, "attrs": {} },
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": -160,
+      "left": -240,
+      "rotate": 90,
+      "attrs": {}
+    },
     {
       "type": "wokwi-resistor",
       "id": "r1",
-      "top": -68.59,
-      "left": 425,
+      "top": -52,
+      "left": 135,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r2",
-      "top": -68.51,
-      "left": 405,
+      "top": -52,
+      "left": 115,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r3",
-      "top": -68.03,
-      "left": 385,
+      "top": -52,
+      "left": 95,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r4",
-      "top": -68.66,
-      "left": 365,
+      "top": -52,
+      "left": 75,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r5",
-      "top": -68.97,
-      "left": 345,
+      "top": -52,
+      "left": 55,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r6",
-      "top": -68.97,
-      "left": 325,
+      "top": -52,
+      "left": 35,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r7",
-      "top": -68.97,
-      "left": 305,
+      "top": -52,
+      "left": 15,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r8",
-      "top": -68.97,
-      "left": 445,
+      "top": -52,
+      "left": 155,
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
-
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": -160,
-      "left": 420,
-      "attrs": { "color": "brown" }
-    },
-
-    {
-      "type": "wokwi-led",
-      "id": "led2",
-      "top": -160,
-      "left": 400,
-      "attrs": { "color": "red" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led3",
-      "top": -160,
-      "left": 380,
-      "attrs": { "color": "orange" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led4",
-      "top": -160,
-      "left": 360,
-      "attrs": { "color": "yellow" }
-    },
+    { "type": "wokwi-led", "id": "led1", "top": -160, "left": 130, "attrs": { "color": "brown" } },
+    { "type": "wokwi-led", "id": "led2", "top": -160, "left": 110, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led3", "top": -160, "left": 90, "attrs": { "color": "orange" } },
+    { "type": "wokwi-led", "id": "led4", "top": -160, "left": 70, "attrs": { "color": "yellow" } },
     {
       "type": "wokwi-led",
       "id": "led5",
       "top": -160,
-      "left": 340,
+      "left": 50,
       "attrs": { "color": "limegreen" }
     },
+    { "type": "wokwi-led", "id": "led6", "top": -160, "left": 30, "attrs": { "color": "blue" } },
+    { "type": "wokwi-led", "id": "led7", "top": -160, "left": 10, "attrs": { "color": "violet" } },
+    { "type": "wokwi-led", "id": "led8", "top": -160, "left": 150, "attrs": { "color": "black" } },
+
+
     {
-      "type": "wokwi-led",
-      "id": "led6",
-      "top": -160,
-      "left": 320,
-      "attrs": { "color": "blue" }
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": 65,
+      "left": -51,
+      "attrs": { "text": "using D0 or D1 would break a real project." }
     },
+
+
+
     {
-      "type": "wokwi-led",
-      "id": "led7",
-      "top": -160,
-      "left": 300,
-      "attrs": { "color": "violet" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led8",
-      "top": -160,
-      "left": 440,
-      "attrs": { "color": "black" }
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": 84,
+      "left": -51,
+      "attrs": { "text": "used here, makes GPIO full 8-bits." }
     }
+
   ],
   "connections": [
-    [ "uno:GND.1", "led8:C", "black", [ "v0" ] ],
-
-    [ "led1:A", "r1:1", "white", [ "v1" ] ],
-    [ "uno:0", "r8:2", "white", [ "v1" ] ],
-    [ "uno:1", "r1:2", "white", [ "v1" ] ],
-    [ "uno:2", "r2:2", "white", [ "v1" ] ],
-    [ "uno:3", "r3:2", "white", [ "v1" ] ],
-    [ "uno:4", "r4:2", "white", [ "v1" ] ],
-    [ "uno:5", "r5:2", "white", [ "v1" ] ],
-    [ "uno:6", "r6:2", "white", [ "v1" ] ],
-    [ "uno:7", "r7:2", "white", [ "v1" ] ],
-
-    [ "r2:1", "led2:A", "white", [ "v1" ] ],
-    [ "r3:1", "led3:A", "white", [ "v1" ] ],
-    [ "r4:1", "led4:A", "white", [ "v1" ] ],
-    [ "r5:1", "led5:A", "white", ["v1"] ],
-    [ "r6:1", "led6:A", "white", ["v1"] ],
-    [ "r7:1", "led7:A", "white", ["v1"] ],
-    [ "r8:1", "led8:A", "white", [ "v1" ] ],
-
-    [ "led1:C", "led2:C", "white", [ "v1" ] ],
-    [ "led2:C", "led3:C", "white", [ "v1" ] ],
-    [ "led3:C", "led4:C", "white", [ "v1" ] ],
-    [ "led4:C", "led5:C", "white", [ "v1" ] ],
-    [ "led5:C", "led6:C", "white", [ "v1" ] ],
-    [ "led6:C", "led7:C", "white", [ "v1" ] ],
-    [ "led7:C", "led8:C", "white", [ "v1" ] ]
+    [ "uno:GND.1", "led7:C", "black", [ "h1" ] ],
+    [ "led1:A", "r1:1", "#8f4814", [ "v30", "h1" ] ],
+    [ "uno:0", "r8:2", "cyan", [ "h1" ] ],
+    [ "uno:1", "r1:2", "#8f4814", [ "h1" ] ],
+    [ "uno:2", "r2:2", "red", [ "h1" ] ],
+    [ "uno:3", "r3:2", "orange", [ "h1" ] ],
+    [ "uno:4", "r4:2", "yellow", [ "h1" ] ],
+    [ "uno:5", "r5:2", "limegreen", [ "h1" ] ],
+    [ "uno:6", "r6:2", "blue", [ "h1" ] ],
+    [ "uno:7", "r7:2", "violet", [ "h1" ] ],
+    [ "r2:1", "led2:A", "red", [ "v-12", "h-14" ] ],
+    [ "r3:1", "led3:A", "orange", [ "v-12", "h-14" ] ],
+    [ "r4:1", "led4:A", "yellow", [ "v-12", "h-14" ] ],
+    [ "r5:1", "led5:A", "limegreen", [ "v-12", "h-14" ] ],
+    [ "r6:1", "led6:A", "blue", [ "v-12", "h-14" ] ],
+    [ "r7:1", "led7:A", "violet", [ "v-12", "h-14" ] ],
+    [ "r8:1", "led8:A", "cyan", [ "v-12", "h-14" ] ],
+    [ "led1:C", "led8:C", "green", [ "v12", "h-20" ] ],
+    [ "led1:C", "led2:C", "green", [ "v12", "h-20" ] ],
+    [ "led2:C", "led3:C", "green", [ "v12", "h-20" ] ],
+    [ "led3:C", "led4:C", "green", [ "v12", "h-20" ] ],
+    [ "led4:C", "led5:C", "green", [ "v12", "h-20" ] ],
+    [ "led5:C", "led6:C", "green", [ "v12", "h-20" ] ],
+    [ "led6:C", "led7:C", "green", [ "v12", "h-20" ] ]
   ],
   "dependencies": {}
 }
