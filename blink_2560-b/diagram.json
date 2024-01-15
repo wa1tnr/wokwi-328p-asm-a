@@ -52,6 +52,9 @@
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
+
+
+
     {
       "type": "wokwi-resistor",
       "id": "r7",
@@ -60,6 +63,16 @@
       "rotate": 90,
       "attrs": { "value": "1000" }
     },
+
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": -57,
+      "left": 113,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-led", "id": "led8", "top": -144, "left": 100, "attrs": { "color": "red" } },
     { "type": "wokwi-led", "id": "led1", "top": -144, "left": 120, "attrs": { "color": "orange" } },
     { "type": "wokwi-led", "id": "led2", "top": -144, "left": 140, "attrs": { "color": "yellow" } },
     { "type": "wokwi-led", "id": "led3", "top": -144, "left": 160, "attrs": { "color": "limegreen" } },
@@ -87,14 +100,17 @@
     }
   ],
   "connections": [
-    [ "mega:12", "r1:2", "orange", [ "v-22", "h25.2", "v-26" ] ],
 
+    [ "mega:13", "r8:2", "red", [ "v-26", "h1" ] ],
+    [ "mega:12", "r1:2", "orange", [ "v-22", "h25.2", "v-26" ] ],
     [ "mega:11", "r2:2", "yellow", [ "v-17", "h36.35" ] ],
     [ "mega:10", "r3:2", "limegreen", [ "v-12", "h46.85" ] ],
     [ "mega:50", "r4:2", "red", [ "h-39", "v-160", "h-82" ] ],
     [ "mega:51", "r5:2", "orange", [ "h27", "v-167", "h-158.85" ] ],
     [ "mega:52", "r6:2", "yellow", [ "h-46", "v-164", "h1" ] ],
     [ "mega:53", "r7:2", "limegreen", [ "h35", "v-181", "h-128.45" ] ],
+    [ "r8:1", "led8:A", "red", [ "v-8.4", "h-9.35" ] ],
+    [ "led8:C", "led1:C", "black", [ "v8", "h20" ] ],
     [ "r1:1", "led1:A", "orange", [ "v-8.4", "h-9.35" ] ],
     [ "led1:C", "led2:C", "black", [ "v8", "h20" ] ],
     [ "r2:1", "led2:A", "yellow", [ "v-10", "h-9.35" ] ],
@@ -107,7 +123,7 @@
     [ "led5:C", "led6:C", "black", [ "v8", "h20" ] ],
     [ "r6:1", "led6:A", "yellow", [ "h1.73", "v-11.2", "h-21.08" ] ],
     [ "led6:C", "led7:C", "black", [ "v8", "h20" ] ],
-    [ "mega:GND.1", "led1:C", "black", [ "v-24", "h16" ] ],
+    [ "mega:GND.1", "led8:C", "black", [ "v-26", "h1" ] ],
     [ "r7:1", "led7:A", "limegreen", [ "h0", "v-11", "h-9.6" ] ]
   ],
   "dependencies": {}
