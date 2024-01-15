@@ -16,6 +16,15 @@ void setup_serial(void) {
   Serial.begin(9600);
 }
 
+void slower(void) {
+  for (volatile long count = 1233445; count > 1; count--) {
+    ; // no operation
+  }
+}
+void end_serial(void) {
+  Serial.end();
+}
+
 void setup(void) {
   setup_serial();
   Serial.print(" IN setup();\n");
@@ -26,7 +35,11 @@ void setup(void) {
 }
 
 void loop(void) {
+  end_serial();
+  slower();
   vmain();
+  slower();
+  setup_serial();
   Serial.write('.');
 }
 
