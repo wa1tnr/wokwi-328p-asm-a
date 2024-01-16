@@ -17,10 +17,17 @@ void setup_serial(void) {
   Serial.begin(9600);
 }
 
-void slowest(void) {
-  for (volatile long count = 133445; count > 1; count--) {
-    ; // no operation
-  }
+void as_slowest(void) {
+        for (volatile long i = 544; i > 0; i--) {
+            for (volatile long count = 88; count > 1; count--) {
+              ; // no operation
+            }
+        }
+}
+void slowest(void) { // 25, 744, 88 not terrible - six slow counts
+    for (volatile long j = 25; j > 0; j--) {
+        as_slowest();
+    }
 }
 
 
@@ -37,13 +44,11 @@ void end_serial(void) {
 
 void setup(void) {
   setup_serial();
-
-  Serial.println("  GROOVINBOTHAM CITY  TESTING and .tar.gz source Tue 16 Jan 04:54:14 UTC 2024");
-
+  Serial.println("  CARTUHN CAYVERS, GMBH   Tue 16 Jan 13:07:19 UTC 2024");
   Serial.print("     IN setup();");
   Serial.print("  start();  ");
   start();
-  delay(1000);
+  delay(700);
   Serial.print("  vmain();  ");
 }
 
@@ -54,10 +59,6 @@ void loop(void) {
   slower();
   setup_serial();
   Serial.write('.');
-  slowest();
-  slowest();
-  slowest();
-  slowest();
   slowest();
   slowest();
 }
