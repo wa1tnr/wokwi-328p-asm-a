@@ -35,8 +35,8 @@ _delay_ms:
   ; Delay about (r25:r24)*ms. Clobbers r30, and r31.
   ; One millisecond is about 16000 cycles at 16MHz.
   ; The inner loop takes 4 cycles, so we repeat it 3000 times
-  ldi   r31, hi8(4000)
-  ldi   r30, lo8(4000)
+  ldi   r31, hi8(400)
+  ldi   r30, lo8(400)
 1:
   sbiw    r30, 1
   brne    1b
@@ -273,45 +273,6 @@ vmain:
   call  pd7_ON
   call  delay_ms
   call  pd7_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-
-
-
-
-
-
-
-
-
-  call  led_D12_PB4_ON
-  call  delay_ms
-  call  led_D12_PB4_OFF
-  call  delay_ms
-
-  call  led_11_ON
-  call  delay_ms
-  call  led_11_OFF
-  call  delay_ms
-
-  call  led_10_ON
-  call  delay_ms
-  call  led_10_OFF
-  call  delay_ms
-
-  call  led_09_ON
-  call  delay_ms
-  call  led_09_OFF
-  call  delay_ms
-
-  call  led_08_ON
-  call  delay_ms
-  call  led_08_OFF
-  call  delay_ms
-
-  call  delay_ms
   call  delay_ms
   call  delay_ms
   call  delay_ms
