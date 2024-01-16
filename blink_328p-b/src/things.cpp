@@ -23,7 +23,7 @@ void as_slowest(void) {
     }
 }
 void slowest(void) { // 25, 744, 88 not terrible - six slow counts
-    for (volatile long j = 25; j > 0; j--) {
+    for (volatile long j = 35; j > 0; j--) {
         as_slowest();
     }
 }
@@ -38,7 +38,21 @@ void end_serial(void) { Serial.end(); }
 
 void setup(void) {
     setup_serial();
-    Serial.println("  CARTUHN CAYVERS, GMBH   Tue 16 Jan 13:07:19 UTC 2024");
+    Serial.println("  CARTUHN CAYVERS, GMBH   Tue 16 Jan 14:41:33 UTC 2024");
+
+/*
+    Serial.println("\n\n  The time interval between dot ('.') and equals ('=') is poorly understood.  Two calls to 'slowest();' are *required* for an inexplicable reason.  Tried and tried to get it down to as single call to 'slowest()' .. could not do so.");
+*/
+
+    Serial.print("\r\n\r\n  The time interval between dot ('.') and equals ('=') is");
+
+    Serial.print(" poorly understood.\r\n\r\n  Two calls to 'slowest()' are *required* for");
+    Serial.print(" an inexplicable reason.\r\n  Tried to get it down to a");
+    Serial.println(" single call to 'slowest()' .. could not do so.\r\n\r\n  Baffled.\r\n");
+    Serial.print("  dot ('.') and equals ('=') are 'bookends' bracketing the timing\r\n");
+    Serial.print("  under inquiry.  That's the mystery: why this time interval is\r\n");
+    Serial.println("  'wrong' .. unless two subsequent calls to 'slowest()' are made.\r\n");
+
     Serial.print("     IN setup();");
     Serial.print("  start();  ");
     start();
@@ -55,6 +69,7 @@ void loop(void) {
     Serial.write('.');
     slowest();
     slowest();
+    Serial.write('=');
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
