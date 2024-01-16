@@ -96,6 +96,12 @@
       "left": -51,
       "attrs": { "text": "using D0 or D1 would break a real project." }
     },
+
+
+
+
+
+
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -103,12 +109,30 @@
       "left": -51,
       "attrs": { "text": "used here, makes GPIO full 8-bits." }
     },
+
+
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 111,
+      "top": 121,
       "left": -51,
-      "attrs": { "text": "Tue 16 Jan 04:52:37 UTC 2024" }
+      "attrs": { "text": "(start)\n\n\n\n\n(endless loop)" }
+    },
+
+    {
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": 121,
+      "left": -21,
+      "attrs": { "text": "\nBlinks three times, scans, blinks three times, pauses.\nDoes so three times.\nAnd then it prints a single dot.\n<-- single iteration" }
+    },
+
+    {
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": 285,
+      "left": -51,
+      "attrs": { "text": "Tue 16 Jan 12:35:17 UTC 2024" }
     }
   ],
   "connections": [

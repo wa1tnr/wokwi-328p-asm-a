@@ -17,11 +17,20 @@ void setup_serial(void) {
   Serial.begin(9600);
 }
 
+void slowest(void) {
+  for (volatile long count = 133445; count > 1; count--) {
+    ; // no operation
+  }
+}
+
+
 void slower(void) {
   for (volatile long count = 123; count > 1; count--) {
     ; // no operation
   }
 }
+
+
 void end_serial(void) {
   Serial.end();
 }
@@ -29,7 +38,7 @@ void end_serial(void) {
 void setup(void) {
   setup_serial();
 
-  Serial.println("  Tue 16 Jan 04:54:14 UTC 2024");
+  Serial.println("  GROOVINBOTHAM CITY  TESTING and .tar.gz source Tue 16 Jan 04:54:14 UTC 2024");
 
   Serial.print("     IN setup();");
   Serial.print("  start();  ");
@@ -45,6 +54,12 @@ void loop(void) {
   slower();
   setup_serial();
   Serial.write('.');
+  slowest();
+  slowest();
+  slowest();
+  slowest();
+  slowest();
+  slowest();
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

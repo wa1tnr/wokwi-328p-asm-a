@@ -1,6 +1,6 @@
-/* wa1tnr 04 Aug 2023 12:06z */
-/* Fri  4 Aug 15:02:12 UTC 2023 */
+/* wa1tnr 16 Jan 2024 12:34z */
 
+/* Tue 16 Jan 12:34:05 UTC 2024 */
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
 /* not much taken from it, just 0x04 vs 0x24 for DDRB &c */
@@ -203,10 +203,10 @@ led_08_OFF:
 
 start:
   call output_mode_select_gpio
-	call delay_ms
-	ret
+  call delay_ms
+  ret
 
-vmain:
+blvmain:
   call  pd0_ON
   call  delay_ms
   call  pd0_OFF
@@ -214,6 +214,36 @@ vmain:
   call  delay_ms
   call  delay_ms
   call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+
+  call  pd0_ON
+  call  delay_ms
+  call  pd0_OFF
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+
+  call  pd0_ON
+  call  delay_ms
+  call  pd0_OFF
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+
+
 
 
   call  pd1_ON
@@ -277,7 +307,65 @@ vmain:
   call  delay_ms
   call  delay_ms
   call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
 
-	ret
+  call  pd7_ON
+  call  delay_ms
+  call  pd7_OFF
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
 
+  call  pd7_ON
+  call  delay_ms
+  call  pd7_OFF
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  call  delay_ms
+  ret
+
+_delay_pms:
+  ldi   r31, hi8(5000)
+  ldi   r30, lo8(5000)
+1:
+  sbiw    r30, 1
+  brne    1b
+  sbiw    r24, 1
+  brne    _delay_pms
+  ret
+
+delay_pms:
+  ldi   r25, hi8(2900)
+  ldi   r24, lo8(5900)
+  call _delay_pms
+  ret
+
+guadar:
+  ldi  r29, hi8(2)
+  ldi  r28, lo8(3)
+1:
+  call  blvmain
+  call  delay_pms
+  sbiw  r28, 1
+  brne  1b
+  ret
+
+# call   delay_pms
+
+vmain:
+  call  guadar
+  ret
 /* end */
