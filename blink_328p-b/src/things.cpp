@@ -28,7 +28,10 @@ void end_serial(void) {
 
 void setup(void) {
   setup_serial();
-  Serial.print(" IN setup();\n");
+
+  Serial.println("  Tue 16 Jan 04:54:14 UTC 2024");
+
+  Serial.print("     IN setup();");
   Serial.print("  start();  ");
   start();
   delay(1000);
