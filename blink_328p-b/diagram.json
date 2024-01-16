@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "wa1tnr - Tue 16 Jan 01:00:18 UTC 2024",
+  "author": "wa1tnr - Tue 16 Jan 05:03:21 UTC 2024",
   "editor": "wokwi",
   "parts": [
     {
@@ -102,8 +102,14 @@
       "top": 84,
       "left": -51,
       "attrs": { "text": "used here, makes GPIO full 8-bits." }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "led1",
+      "top": 111,
+      "left": -51,
+      "attrs": { "text": "Tue 16 Jan 04:52:37 UTC 2024" }
     }
-
   ],
   "connections": [
     [ "uno:GND.1", "led7:C", "black", [ "h1" ] ],
