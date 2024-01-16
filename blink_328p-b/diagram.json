@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "wa1tnr - Fri  4 Aug 12:06:52 UTC 2023",
+  "author": "wa1tnr - Tue 16 Jan 01:00:18 UTC 2024",
   "editor": "wokwi",
   "parts": [
     {
@@ -88,9 +88,7 @@
     },
     { "type": "wokwi-led", "id": "led6", "top": -160, "left": 30, "attrs": { "color": "blue" } },
     { "type": "wokwi-led", "id": "led7", "top": -160, "left": 10, "attrs": { "color": "violet" } },
-    { "type": "wokwi-led", "id": "led8", "top": -160, "left": 150, "attrs": { "color": "black" } },
-
-
+    { "type": "wokwi-led", "id": "led8", "top": -160, "left": 150, "attrs": { "color": "#112299" } },
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -98,9 +96,6 @@
       "left": -51,
       "attrs": { "text": "using D0 or D1 would break a real project." }
     },
-
-
-
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -113,7 +108,7 @@
   "connections": [
     [ "uno:GND.1", "led7:C", "black", [ "h1" ] ],
     [ "led1:A", "r1:1", "#8f4814", [ "v30", "h1" ] ],
-    [ "uno:0", "r8:2", "cyan", [ "h1" ] ],
+    [ "uno:0", "r8:2", "#3344BB", [ "h1" ] ],
     [ "uno:1", "r1:2", "#8f4814", [ "h1" ] ],
     [ "uno:2", "r2:2", "red", [ "h1" ] ],
     [ "uno:3", "r3:2", "orange", [ "h1" ] ],
@@ -127,7 +122,7 @@
     [ "r5:1", "led5:A", "limegreen", [ "v-12", "h-14" ] ],
     [ "r6:1", "led6:A", "blue", [ "v-12", "h-14" ] ],
     [ "r7:1", "led7:A", "violet", [ "v-12", "h-14" ] ],
-    [ "r8:1", "led8:A", "cyan", [ "v-12", "h-14" ] ],
+    [ "r8:1", "led8:A", "#3344BB", [ "v-12", "h-14" ] ],
     [ "led1:C", "led8:C", "green", [ "v12", "h-20" ] ],
     [ "led1:C", "led2:C", "green", [ "v12", "h-20" ] ],
     [ "led2:C", "led3:C", "green", [ "v12", "h-20" ] ],
