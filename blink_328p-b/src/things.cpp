@@ -42,16 +42,16 @@ void setup(void) {
     Serial.println("  firestorm mister hawke - firestorm");
 
     Serial.println("");
-    Serial.print("  ");
+    Serial.print("                                           ");
     Serial.print("dot when TX/RX LEDs OFF - equals when they are ON\r\n");
     Serial.print("\r\n  ");
-    Serial.println("OBLIT comment was here -- ... more likely, now.  Have a temporary fix already.");
+    Serial.println("OBLIT comment was here                 ... more likely, now.  Have a temporary fix already.");
     Serial.println("");
-    Serial.print("     IN setup();");
-    Serial.print("  start();  ");
+    Serial.print("     ... in setup();");
+    Serial.print("  start(); ");
     start();
     delay(700);
-    Serial.print("  vmain();  ");
+    Serial.print("  vmain(); ");
 }
 
 void loop(void) {
