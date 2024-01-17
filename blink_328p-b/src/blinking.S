@@ -1,10 +1,8 @@
-/* old work */
+/* new work Wed 17th 12:02z */
+/* wa1tnr 17 Jan 2024  12:02z */
 
-/* Tue 16 Jan 19:45:11 UTC 2024 */
+/* Wed 17 Jan 12:02:32 UTC 2024 */
 
-/* wa1tnr 16 Jan 2024 12:34z */
-
-/* Tue 16 Jan 12:34:05 UTC 2024 */
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
 /* not much taken from it, just 0x04 vs 0x24 for DDRB &c */
@@ -59,20 +57,17 @@ output_mode_select_gpio:
 	out  DDRD, r17
 	ret
 
-xall_leds_OFF:
-  ldi  r17, 0x00
-	out  PORTD, r17
-	ret
 
-led_13_ON:
-  ldi  r17, PD5
-	out  PORTD, r17
-	ret
 
-led_13_OFF:
-  ldi r17, ! (0xff ^ PD5)
-  out  PORTD, r17
-	ret
+
+
+
+
+
+
+
+
+
 
 pd0_ON:
   ldi  r17, PD0
@@ -84,266 +79,274 @@ pd0_OFF:
   out  PORTD, r17
 	ret
 
-pd1_ON:
-  ldi  r17, PD1
-	out  PORTD, r17
-	ret
-
-pd1_OFF:
-  ldi r17, ! (0xff ^ PD1)
-  out  PORTD, r17
-	ret
-
-pd2_ON:
-  ldi  r17, PD2
-	out  PORTD, r17
-	ret
-
-pd2_OFF:
-  ldi r17, ! (0xff ^ PD2)
-  out  PORTD, r17
-	ret
-
-pd3_ON:
-  ldi  r17, PD3
-	out  PORTD, r17
-	ret
-
-pd3_OFF:
-  ldi r17, ! (0xff ^ PD3)
-  out  PORTD, r17
-	ret
-
-pd4_ON:
-  ldi  r17, PD4
-	out  PORTD, r17
-	ret
-
-pd4_OFF:
-  ldi r17, ! (0xff ^ PD4)
-  out  PORTD, r17
-	ret
-
-pd5_ON:
-  ldi  r17, PD5
-	out  PORTD, r17
-	ret
-
-pd5_OFF:
-  ldi r17, ! (0xff ^ PD5)
-  out  PORTD, r17
-	ret
-
-pd6_ON:
-  ldi  r17, PD6
-	out  PORTD, r17
-	ret
-
-pd6_OFF:
-  ldi r17, ! (0xff ^ PD6)
-  out  PORTD, r17
-	ret
-
-pd7_ON:
-  ldi  r17, PD7
-	out  PORTD, r17
-	ret
-
-pd7_OFF:
-  ldi r17, ! (0xff ^ PD7)
-  out  PORTD, r17
-	ret
 
 
-led_D12_PB4_ON:
-  ldi  r17, PD4
-	out  PORTD, r17
-	ret
 
-led_D12_PB4_OFF:
-  ldi  r17, ! (0xff ^ PD4)
-  out  PORTD, r17
-  ret
 
-led_11_ON:
-  ldi  r17, PD3
-  out  PORTD, r17
-  ret
 
-led_11_OFF:
-  ldi  r17, ! (0xff ^ PD3)
-	out  PORTD, r17
-  ret
 
-led_10_ON:
-  ldi  r17, PD2
-	out  PORTD, r17
-  ret
 
-led_10_OFF:
-  ldi  r17, ! (0xff ^ PD2)
-	out  PORTD, r17
-  ret
 
-led_09_ON:
-  ldi  r17, PD1
-	out  PORTD, r17
-  ret
 
-led_09_OFF:
-  ldi  r17, ! (0xff ^ PD1)
-	out  PORTD, r17
-  ret
 
-led_08_ON:
-  ldi  r17, PD0
-	out  PORTD, r17
-  ret
 
-led_08_OFF:
-  ldi  r17, ! (0xff ^ PD0)
-	out  PORTD, r17
-  ret
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 start:
   call output_mode_select_gpio
   call delay_ms
   ret
 
+
+
+
 blvmain:
   call  pd0_ON
   call  delay_ms
   call  pd0_OFF
   call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-
-  call  pd0_ON
-  call  delay_ms
-  call  pd0_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-
-  call  pd0_ON
-  call  delay_ms
-  call  pd0_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
 
 
-  call  pd1_ON
-  call  delay_ms
-  call  pd1_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd2_ON
-  call  delay_ms
-  call  pd2_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd3_ON
-  call  delay_ms
-  call  pd3_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd4_ON
-  call  delay_ms
-  call  pd4_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd5_ON
-  call  delay_ms
-  call  pd5_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd6_ON
-  call  delay_ms
-  call  pd6_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
 
-  call  pd7_ON
-  call  delay_ms
-  call  pd7_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
-  call  pd7_ON
-  call  delay_ms
-  call  pd7_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
 
-  call  pd7_ON
-  call  delay_ms
-  call  pd7_OFF
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
-  call  delay_ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   call  delay_ms
   ret
+
+
+/* r31 r30 r25 r24 */
+
 
 _delay_pms:
   ldi   r31, hi8(5000)
   ldi   r30, lo8(5000)
+
 1:
   sbiw    r30, 1
   brne    1b
@@ -351,26 +354,64 @@ _delay_pms:
   brne    _delay_pms
   ret
 
+
+/* no push or pop in delay_pms since it is half a call as it where */
+
 delay_pms:
   ldi   r25, hi8(2900)
   ldi   r24, lo8(5900)
+1:
   call _delay_pms
   ret
 
 guadar:
   ldi  r24, 0x03
+
+
 1:
-  push r24
+  push  r24 /* first pass: keep initial value.  second++ passes: keep decremented from previous iteration */
+
+
+
+  push  r24 /* protect against one call only */
+
   call  blvmain
+
+  pop   r24 /* restore to what it was before call to blvmain */
+
+
+  push  r24 /* protect from delay_pms call */
   call  delay_pms
-  pop r24
+  pop   r24 /* restore r24 after delay_pms */
+
+
+  pop   r24 /* restore r24 after anything that happened outside this function */
+
+
+  /* imo  the redundant push and pop pairs to r24 */
+  /*      can have nothing odd == so can be factored */
+  /*      to a singleton */
+
+  /*      failure to do so - to factor - is a mistake, */
+  /*      as stack space is limited, and 'we' do not know */
+  /*      just how, when and why that space is allocated. */
+
   sbiw  r24, 1
   brne  1b
   ret
 
-# call   delay_pms
-
 vmain:
+  push  r24
+  push  r25
+  push  r30
+  push  r31
+
   call  guadar
+
+  pop   r31
+  pop   r30
+  pop   r25
+  pop   r24
   ret
+
 /* end */
