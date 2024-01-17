@@ -1,6 +1,5 @@
-/* wa1tnr 16 Jan 01:04:48 UTC 2024 */
-
-/* Tue 16 Jan 01:04:48 UTC 2024 */
+/* wa1tnr 17 Jan 09:27:39 UTC 2024 */
+/* Wed 17 Jan 09:27:39 UTC 2024 */
 
 #include <Arduino.h>
 
@@ -38,7 +37,7 @@ void end_serial(void) { Serial.end(); }
 
 void setup(void) {
     setup_serial();
-    Serial.println("  CARTUHN CAYVERS, GMBH   Tue 16 Jan 14:41:33 UTC 2024");
+    Serial.println("  CARTUHN CAYVERS, GMBH   Wed 17 Jan 09:27:39 UTC 2024");
 
 /*
     Serial.println("\n\n  The time interval between dot ('.') and equals ('=') is poorly understood.  Two calls to 'slowest();' are *required* for an inexplicable reason.  Tried and tried to get it down to as single call to 'slowest()' .. could not do so.");
