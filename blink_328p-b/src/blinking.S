@@ -1,3 +1,5 @@
+/* Tue 16 Jan 19:45:11 UTC 2024 */
+
 /* wa1tnr 16 Jan 2024 12:34z */
 
 /* Tue 16 Jan 12:34:05 UTC 2024 */
@@ -354,12 +356,13 @@ delay_pms:
   ret
 
 guadar:
-  ldi  r29, hi8(2)
-  ldi  r28, lo8(3)
+  ldi  r24, 0x03
 1:
+  push r24
   call  blvmain
   call  delay_pms
-  sbiw  r28, 1
+  pop r24
+  sbiw  r24, 1
   brne  1b
   ret
 
