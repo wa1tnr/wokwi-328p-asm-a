@@ -15,7 +15,7 @@
       "type": "wokwi-resistor",
       "id": "r1",
       "top": 41,
-      "left": 135,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -23,7 +23,7 @@
       "type": "wokwi-resistor",
       "id": "r2",
       "top": 31,
-      "left": 115,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -31,7 +31,7 @@
       "type": "wokwi-resistor",
       "id": "r3",
       "top": 22,
-      "left": 95,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -39,7 +39,7 @@
       "type": "wokwi-resistor",
       "id": "r4",
       "top": 12,
-      "left": 75,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -47,7 +47,7 @@
       "type": "wokwi-resistor",
       "id": "r5",
       "top": 3,
-      "left": 55,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -55,7 +55,7 @@
       "type": "wokwi-resistor",
       "id": "r6",
       "top": -7,
-      "left": 35,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -63,7 +63,7 @@
       "type": "wokwi-resistor",
       "id": "r7",
       "top": -17,
-      "left": 15,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -71,7 +71,7 @@
       "type": "wokwi-resistor",
       "id": "r8",
       "top": 50,
-      "left": 155,
+      "left": 0,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
@@ -144,8 +144,8 @@
     [ "r3:2", "led3:A", "orange", [ "h14", "*",    "v30" ] ],
     [ "r4:2", "led4:A", "yellow", [ "h14", "*",    "v36" ] ],
     [ "r5:2", "led5:A", "limegreen", [ "h14", "*", "v42" ] ],
-    [ "r6:2", "led6:A", "blue", [ "h14", "*",      "v48" ] ],
-    [ "r7:2", "led7:A", "violet", [ "h14", "*",    "v54" ] ],
+    [ "r6:2", "led6:A", "blue", [ "h14", "*",      "v18" ] ],
+    [ "r7:2", "led7:A", "violet", [ "h14", "*",    "v30" ] ],
     [ "r8:2", "led8:A", "#3344BB", [ "h14", "*",   "v12" ] ],
     [ "led1:C", "led8:C", "green", [ "v12", "h-20" ] ],
     [ "led1:C", "led2:C", "green", [ "v12", "h-20" ] ],
