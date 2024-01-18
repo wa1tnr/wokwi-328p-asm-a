@@ -103,8 +103,6 @@
       "left": -51,
       "attrs": { "text": "used here, makes GPIO full 8-bits." }
     },
-
-
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -112,7 +110,6 @@
       "left": -51,
       "attrs": { "text": "(start)\n\n\n\n\n(endless loop)" }
     },
-
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -120,7 +117,6 @@
       "left": -21,
       "attrs": { "text": "\nBlinks three times, scans, blinks three times, pauses.\nDoes so three times.\nAnd then it prints a single dot.\n<-- single iteration" }
     },
-
     {
       "type": "wokwi-text",
       "id": "led1",
