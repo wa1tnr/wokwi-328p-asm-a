@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "wa1tnr - Thu 18 Jan 15:12:50 UTC 2024",
+  "author": "wa1tnr - Thu 18 Jan 19:21:31 UTC 2024",
   "editor": "wokwi",
   "parts": [
     {
@@ -14,92 +14,95 @@
     {
       "type": "wokwi-resistor",
       "id": "r1",
-      "top": 41,
-      "left": 0,
+      "top": 70,
+      "left": 90,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r2",
-      "top": 31,
-      "left": 0,
+      "top": 56,
+      "left": 35,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r3",
-      "top": 22,
-      "left": 0,
-      "rotate": 0,
+      "top": 37,
+      "left": 37,
+      "rotate": 7,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r4",
-      "top": 12,
-      "left": 0,
-      "rotate": 0,
+      "top": 18,
+      "left": 31,
+      "rotate": -10,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r5",
-      "top": 3,
-      "left": 0,
-      "rotate": 0,
+      "top": 2,
+      "left": 12,
+      "rotate": -10,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r6",
       "top": -7,
-      "left": 0,
-      "rotate": 0,
+      "left": -7,
+      "rotate": -10,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r7",
-      "top": -17,
-      "left": 0,
+      "top": -24,
+      "left": -26,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r8",
-      "top": 50,
-      "left": 0,
+      "top": 90,
+      "left": 51,
       "rotate": 0,
       "attrs": { "value": "1000" }
     },
-    { "type": "wokwi-led", "id": "led1", "top": -100, "left": 130, "attrs": { "color": "brown" } },
-    { "type": "wokwi-led", "id": "led2", "top": -100, "left": 110, "attrs": { "color": "red" } },
-    { "type": "wokwi-led", "id": "led3", "top": -100, "left": 90, "attrs": { "color": "orange" } },
-    { "type": "wokwi-led", "id": "led4", "top": -100, "left": 70, "attrs": { "color": "yellow" } },
-    {
-      "type": "wokwi-led",
-      "id": "led5",
-      "top": -100,
-      "left": 50,
-      "attrs": { "color": "limegreen" }
-    },
-    { "type": "wokwi-led", "id": "led6", "top": -100, "left": 30, "attrs": { "color": "blue" } },
-    { "type": "wokwi-led", "id": "led7", "top": -100, "left": 10, "attrs": { "color": "violet" } },
-    { "type": "wokwi-led", "id": "led8", "top": -100, "left": 150, "attrs": { "color": "#112299" } },
+
+    { "type": "wokwi-led", "id": "led1", "top": -100, "left": 134, "attrs": { "color": "brown" } },
+
+    { "type": "wokwi-led", "id": "led2", "top": -100, "left": 114, "attrs": { "color": "red" } },
+
+    { "type": "wokwi-led", "id": "led3", "top": -100, "left": 94, "attrs": { "color": "orange" } },
+
+    { "type": "wokwi-led", "id": "led4", "top": -100, "left": 74, "attrs": { "color": "yellow" } },
+
+    { "type": "wokwi-led", "id": "led5", "top": -100, "left": 54, "attrs": { "color": "limegreen" } },
+
+    { "type": "wokwi-led", "id": "led6", "top": -100, "left": 34, "attrs": { "color": "blue" } },
+
+    { "type": "wokwi-led", "id": "led7", "top": -100, "left": 14, "attrs": { "color": "violet" } },
+
+    { "type": "wokwi-led", "id": "led8", "top": -100, "left": 154, "attrs": { "color": "#112299" } },
+
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 65,
+      "top": 119,
       "left": -51,
       "attrs": { "text": "using D0 or D1 would break a real project." }
     },
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 84,
+      "top": 139,
       "left": -51,
       "attrs": { "text": "used here, makes GPIO full 8-bits." }
     },
@@ -122,34 +125,59 @@
       "id": "led1",
       "top": -140,
       "left": 8,
-      "attrs": { "text": "Thu 18 Jan 15:12:50 UTC 2024  tarkus ix" }
+      "attrs": { "text": "Thu 18 Jan 17:12:11 UTC 2024  tarkus ix" }
     }
   ],
   "connections": [
+
     [ "uno:GND.1", "led7:C", "black", [ "h18", "v38", "h1" ] ],
-    [ "r1:2", "led1:A", "#8f4814", [ "h110", "*",       "v18" ] ],
-    [ "uno:0", "r8:1", "#3344BB", [ "h1" ] ],
-    [ "uno:1", "r1:1", "#8f4814", [ "h1" ] ],
-    [ "uno:2", "r2:1", "red", [ "h1" ] ],
-    [ "uno:3", "r3:1", "orange", [ "h1" ] ],
-    [ "uno:4", "r4:1", "yellow", [ "h1" ] ],
-    [ "uno:5", "r5:1", "limegreen", [ "h1" ] ],
-    [ "uno:6", "r6:1", "blue", [ "h1" ] ],
-    [ "uno:7", "r7:1", "violet", [ "h1" ] ],
-    [ "r2:2", "led2:A", "red", [ "h90", "*",       "v24" ] ],
-    [ "r3:2", "led3:A", "orange", [ "h70", "*",    "v24" ] ],
-    [ "r4:2", "led4:A", "yellow", [ "h50", "*",    "v24" ] ],
-    [ "r5:2", "led5:A", "limegreen", [ "h28", "*", "v24" ] ],
-    [ "r6:2", "led6:A", "blue", [ "h14", "*",      "v24" ] ],
-    [ "r7:2", "led7:A", "violet", [ "h6", "*",    "v30" ] ],
-    [ "r8:2", "led8:A", "#3344BB", [ "h130", "*",   "v12" ] ],
+
+    [ "r1:2",   "led1:A", "#8f4814", [ "h1" ] ],
+
+    [ "uno:0",    "r8:1", "#3344BB", [ "h10", "v1" ] ],
+
+    [ "uno:1",    "r1:1", "#8f4814", [ "h16", "v1" ] ],
+
+    [ "uno:2",    "r2:1", "red", [ "h26", "v1" ] ],
+
+    [ "uno:3",    "r3:1", "orange", [ "h30", "v20" ] ],
+
+    [ "uno:4",    "r4:1", "yellow", [ "h34", "v1" ] ],
+
+    [ "uno:5",    "r5:1", "limegreen", [ "h-12", "v1" ] ],
+
+    [ "uno:6",    "r6:1", "blue", [ "h-10", "v1" ] ],
+
+    [ "uno:7",    "r7:1", "violet", [ "h-24", "v1" ] ],
+
+    [ "r2:2",   "led2:A", "red", [ "h1" ] ],
+
+    [ "r3:2",   "led3:A", "orange", [ "h1" ] ],
+
+    [ "r4:2",   "led4:A", "yellow", [ "h1" ] ],
+
+    [ "r5:2",   "led5:A", "limegreen", [ "h1"] ],
+
+    [ "r6:2",   "led6:A", "blue", [ "h1" ] ],
+
+    [ "r7:2",   "led7:A", "violet", [ "h1" ] ],
+
+    [ "r8:2",   "led8:A", "#3344BB", [ "h1" ] ],
+
     [ "led1:C", "led8:C", "green", [ "v12", "h-20" ] ],
+
     [ "led1:C", "led2:C", "green", [ "v12", "h-20" ] ],
+
     [ "led2:C", "led3:C", "green", [ "v12", "h-20" ] ],
+
     [ "led3:C", "led4:C", "green", [ "v12", "h-20" ] ],
+
     [ "led4:C", "led5:C", "green", [ "v12", "h-20" ] ],
+
     [ "led5:C", "led6:C", "green", [ "v12", "h-20" ] ],
+
     [ "led6:C", "led7:C", "green", [ "v12", "h-20" ] ]
+
   ],
   "dependencies": {}
 }
