@@ -1,8 +1,10 @@
-/* new work Wed 17th 12:02z */
-/* wa1tnr 17 Jan 2024  12:02z */
+/* new work Wed 17th 10:06z */
 
-/* Wed 17 Jan 12:02:32 UTC 2024 */
+/* Tue 16 Jan 19:45:11 UTC 2024 */
 
+/* wa1tnr 16 Jan 2024 12:34z */
+
+/* Tue 16 Jan 12:34:05 UTC 2024 */
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
 /* not much taken from it, just 0x04 vs 0x24 for DDRB &c */
@@ -12,7 +14,6 @@
 
 .equ DDRD,  0x0A /* 0x2A */ /* 13.4.9 */
 .equ PORTD, 0x0b /* 0x2b */ /* 13.4.8 */
-
 
 .equ PB5, 0x20 // D13
 .equ PB4, 0x10 // D12
@@ -33,6 +34,14 @@
 .global start
 .global vmain
 
+; I am a comment
+/*
+i am a comment
+*/
+
+/* ab */
+
+/* r31, r30, r25, 24 _delay_ms */
 _delay_ms:
   ; Delay about (r25:r24)*ms. Clobbers r30, and r31.
   ; One millisecond is about 16000 cycles at 16MHz.
@@ -52,296 +61,127 @@ delay_ms:
   call _delay_ms
   ret
 
+_delay_8ms:
+  ldi   r24, 0x08
+1:
+  push  r24
+  call  delay_ms
+  pop   r24
+  sbiw  r24, 1
+  brne  1b
+  ret
+
+delay_8ms:
+  push  r24
+  push  r25
+  push  r30
+  push  r31
+  call  _delay_8ms
+  pop   r31
+  pop   r30
+  pop   r25
+  pop   r24
+  ret
+
 output_mode_select_gpio:
   ldi  r17, 0x0 | PD7 | PD6 | PD5 | PD4 | PD3 | PD2 | PD1 | PD0
 	out  DDRD, r17
 	ret
 
-
-
-
-
-
-
-
-
-
-
-
-
-pd0_ON:
-  ldi  r17, PD0
-	out  PORTD, r17
-	ret
-
-pd0_OFF:
-  ldi r17, ! (0xff ^ PD0)
-  out  PORTD, r17
-	ret
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.WARNING "This is a typed warning at ralph label"
+
+ralph: .BYTE 0x22, 0x23, 0x24, 0x25, 0x26, 0x27
+
+.WARNING "This is a typed warning at pd0_OFFasm label"
+
+pd0_ONb:  .BYTE 0x11, 0xe0, 0x1b, 0xb9, 0x08, 0x95
+pd1_ONb:  .BYTE 0x12, 0xe0, 0x1b, 0xb9, 0x08, 0x95
+pd2_ONb:  .BYTE 0x14, 0xe0, 0x1b, 0xb9, 0x08, 0x95
+pd3_ONb:  .BYTE 0x18, 0xe0, 0x1b, 0xb9, 0x08, 0x95
+pd4_ONb:  .BYTE 0x10, 0xe1, 0x1b, 0xb9, 0x08, 0x95
+pd5_ONb:  .BYTE 0x10, 0xe2, 0x1b, 0xb9, 0x08, 0x95
+pd6_ONb:  .BYTE 0x10, 0xe4, 0x1b, 0xb9, 0x08, 0x95
+pd7_ONb:  .BYTE 0x10, 0xe8, 0x1b, 0xb9, 0x08, 0x95
+pd0_OFFb: .BYTE 0x10, 0xe0, 0x1b, 0xb9, 0x08, 0x95
 
 start:
   call output_mode_select_gpio
   call delay_ms
   ret
 
-
-
-
 blvmain:
-  call  pd0_ON
+
+/* blink D0, the hard way */
+
+  call  pd0_ONb
   call  delay_ms
-  call  pd0_OFF
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  pd0_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  pd0_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  pd1_ONb
+  call  delay_ms
+  call  pd0_OFFb
   call  delay_ms
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  call  pd2_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_ms
+
+  call  pd3_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_ms
+
+  call  pd4_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_ms
+
+  call  pd5_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_ms
+
+  call  pd6_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_ms
+
+  call  delay_8ms
+
+  call  pd7_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  pd7_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  pd7_ONb
+  call  delay_ms
+  call  pd0_OFFb
+  call  delay_8ms
+
+  call  delay_8ms
 
   call  delay_ms
   ret
 
 
 /* r31 r30 r25 r24 */
-
 
 _delay_pms:
   ldi   r31, hi8(5000)
@@ -366,36 +206,11 @@ delay_pms:
 
 guadar:
   ldi  r24, 0x03
-
-
 1:
-  push  r24 /* first pass: keep initial value.  second++ passes: keep decremented from previous iteration */
-
-
-
-  push  r24 /* protect against one call only */
-
+  push  r24
   call  blvmain
-
-  pop   r24 /* restore to what it was before call to blvmain */
-
-
-  push  r24 /* protect from delay_pms call */
   call  delay_pms
   pop   r24 /* restore r24 after delay_pms */
-
-
-  pop   r24 /* restore r24 after anything that happened outside this function */
-
-
-  /* imo  the redundant push and pop pairs to r24 */
-  /*      can have nothing odd == so can be factored */
-  /*      to a singleton */
-
-  /*      failure to do so - to factor - is a mistake, */
-  /*      as stack space is limited, and 'we' do not know */
-  /*      just how, when and why that space is allocated. */
-
   sbiw  r24, 1
   brne  1b
   ret
@@ -415,3 +230,4 @@ vmain:
   ret
 
 /* end */
+
