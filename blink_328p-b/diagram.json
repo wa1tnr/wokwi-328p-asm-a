@@ -96,12 +96,6 @@
       "left": -51,
       "attrs": { "text": "using D0 or D1 would break a real project." }
     },
-
-
-
-
-
-
     {
       "type": "wokwi-text",
       "id": "led1",
@@ -137,7 +131,7 @@
   ],
   "connections": [
     [ "uno:GND.1", "led7:C", "black", [ "h1" ] ],
-    [ "led1:A", "r1:2", "#8f4814", [ "h14", "v1" ] ],
+    [ "r1:2", "led1:A", "#8f4814", [ "h14", "*",       "v18" ] ],
     [ "uno:0", "r8:1", "#3344BB", [ "h1" ] ],
     [ "uno:1", "r1:1", "#8f4814", [ "h1" ] ],
     [ "uno:2", "r2:1", "red", [ "h1" ] ],
@@ -146,13 +140,13 @@
     [ "uno:5", "r5:1", "limegreen", [ "h1" ] ],
     [ "uno:6", "r6:1", "blue", [ "h1" ] ],
     [ "uno:7", "r7:1", "violet", [ "h1" ] ],
-    [ "r2:2", "led2:A", "red", [ "h14", "v1" ] ],
-    [ "r3:2", "led3:A", "orange", [ "h14", "v1" ] ],
-    [ "r4:2", "led4:A", "yellow", [ "h14", "v1" ] ],
-    [ "r5:2", "led5:A", "limegreen", [ "h14", "v1" ] ],
-    [ "r6:2", "led6:A", "blue", [ "h14", "v1" ] ],
-    [ "r7:2", "led7:A", "violet", [ "h14", "v1" ] ],
-    [ "r8:2", "led8:A", "#3344BB", [ "h14", "v1" ] ],
+    [ "r2:2", "led2:A", "red", [ "h14", "*",       "v24" ] ],
+    [ "r3:2", "led3:A", "orange", [ "h14", "*",    "v30" ] ],
+    [ "r4:2", "led4:A", "yellow", [ "h14", "*",    "v36" ] ],
+    [ "r5:2", "led5:A", "limegreen", [ "h14", "*", "v42" ] ],
+    [ "r6:2", "led6:A", "blue", [ "h14", "*",      "v48" ] ],
+    [ "r7:2", "led7:A", "violet", [ "h14", "*",    "v54" ] ],
+    [ "r8:2", "led8:A", "#3344BB", [ "h14", "*",   "v12" ] ],
     [ "led1:C", "led8:C", "green", [ "v12", "h-20" ] ],
     [ "led1:C", "led2:C", "green", [ "v12", "h-20" ] ],
     [ "led2:C", "led3:C", "green", [ "v12", "h-20" ] ],
