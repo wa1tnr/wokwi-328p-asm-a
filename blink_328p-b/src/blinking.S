@@ -1,10 +1,6 @@
-/* new work Wed 17th 10:06z */
+/* Thu 18 Jan 12:42:27 UTC 2024 */
+/* wa1tnr 18 Jan 2024 12:42z */
 
-/* Tue 16 Jan 19:45:11 UTC 2024 */
-
-/* wa1tnr 16 Jan 2024 12:34z */
-
-/* Tue 16 Jan 12:34:05 UTC 2024 */
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
 
 /* not much taken from it, just 0x04 vs 0x24 for DDRB &c */
