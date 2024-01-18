@@ -1,3 +1,4 @@
 doc/TH*
 _nop*
-blink_328p-b
+blink_328p-b/src/*
+!blink_328p-b/src/blinking.S

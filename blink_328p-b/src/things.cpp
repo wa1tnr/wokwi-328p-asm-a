@@ -1,6 +1,6 @@
-/* wa1tnr Thu 18 Jan 12:42:27 UTC 2024 */
+/* wa1tnr Thu 18 Jan 15:12:50 UTC 2024 */
 
-/* Thu 18 Jan 12:42:27 UTC 2024 */
+/* Thu 18 Jan 15:12:50 UTC 2024 */
 
 #include <Arduino.h>
 
@@ -39,11 +39,12 @@ void end_serial(void) { Serial.end(); }
 void setup(void) {
     setup_serial();
     Serial.println("  SILVERFOOT BROTHERS, GMBH");
-    Serial.print("  Thu 18 Jan 12:42:27 UTC 2024");
-    Serial.println("  of course I don't have three");
+    Serial.print("  Thu 18 Jan 15:12:50 UTC 2024");
+    Serial.println("  quarter to nine at night");
     Serial.println("");
     Serial.print("  ");
     Serial.print("dot when TX/RX LEDs OFF - equals when they are ON\r\n");
+    Serial.print("\r\n  trash the SIM tab not the diagram to reload");
     Serial.print("\r\n  ");
     Serial.println("");
     Serial.print("     ... in setup();");

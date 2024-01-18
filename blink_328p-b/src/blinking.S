@@ -1,4 +1,4 @@
-/* Thu 18 Jan 13:53:02 UTC 2024   DARMOK */
+/* Thu 18 Jan 14:04:27 UTC 2024   VETURE */
 /* wa1tnr 18 Jan 2024 12:42z */
 
 /* https://arduino.stackexchange.com/questions/23146/make-led-blink-using-avr-assembly */
@@ -111,7 +111,7 @@ blvmain:
 
   push  r24  /* previously unnecessary but now changing r24 immediately */
   push  r25
-  ldi   r24, 0x7 /* 7 blinks - subloop counter, D0 LED (led8) */
+  ldi   r24, 0x3 /* PURPLE/BLACK right side - n blinks - subloop counter, D0 LED (led8) */
 1:
   push  r24
   call  pd0_ONb
@@ -159,7 +159,7 @@ blvmain:
 
   push  r24  /* previously unnecessary but now changing r24 immediately */
   push  r25
-  ldi   r24, 0x4 /* TEST new iterating blink code inline */
+  ldi   r24, 0x3 /* VIOLET (L) last LED to iterate */
 1:
   push  r24
   call  pd7_ONb
@@ -225,5 +225,7 @@ vmain:
   pop   r24  /* TODO  rule:  pop r24 always the last pop */
   ret
 
-/* end */
 
+// lines 114 162 counts that are apparent early
+
+/* end */
