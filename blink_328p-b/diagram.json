@@ -106,23 +106,23 @@
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 121,
-      "left": -51,
-      "attrs": { "text": "(start)\n\n\n\n\n(endless loop)" }
+      "top": -210,
+      "left": -651,
+      "attrs": { "text": "(start)\n\n\n\n\n\n(endless loop)" }
     },
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 121,
-      "left": -21,
-      "attrs": { "text": "\nBlinks three times, scans, blinks three times, pauses.\nDoes so three times.\nAnd then it prints a single dot.\n<-- single iteration" }
+      "top": -209,
+      "left": -611,
+      "attrs": { "text": "\nBlinks multiple times (varies) (R),\nscans, blinks 3x (L), pauses.\nDoes that 5x.\nThen it prints a single dot.\n<-- single iteration" }
     },
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": 285,
-      "left": -51,
-      "attrs": { "text": "Thu 18 Jan 12:09 UTC 2024  tarkus viii" }
+      "top": -140,
+      "left": 8,
+      "attrs": { "text": "Thu 18 Jan 13:04 UTC 2024  tarkus viii" }
     }
   ],
   "connections": [
