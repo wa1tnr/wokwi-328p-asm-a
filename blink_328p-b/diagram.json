@@ -46,17 +46,17 @@
     {
       "type": "wokwi-resistor",
       "id": "r5",
-      "top": 2,
+      "top": 7,
       "left": 12,
-      "rotate": -10,
+      "rotate": 0,
       "attrs": { "value": "1000" }
     },
     {
       "type": "wokwi-resistor",
       "id": "r6",
-      "top": -7,
+      "top": -11,
       "left": -7,
-      "rotate": -10,
+      "rotate": 0,
       "attrs": { "value": "1000" }
     },
     {
@@ -109,15 +109,15 @@
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": -210,
-      "left": -651,
+      "top": -200,
+      "left": -470,
       "attrs": { "text": "(start)\n\n\n\n\n\n(endless loop)" }
     },
     {
       "type": "wokwi-text",
       "id": "led1",
-      "top": -209,
-      "left": -611,
+      "top": -199,
+      "left": -450,
       "attrs": { "text": "\nBlinks multiple times (varies) (R),\nscans, blinks 3x (L), pauses.\nDoes that 5x.\nThen it prints a single dot.\n<-- single iteration" }
     },
     {
@@ -125,7 +125,7 @@
       "id": "led1",
       "top": -140,
       "left": 8,
-      "attrs": { "text": "Thu 18 Jan 17:12:11 UTC 2024  tarkus ix" }
+      "attrs": { "text": "Thu 18 Jan 20:43:14 UTC 2024  tarkus ix" }
     }
   ],
   "connections": [
@@ -134,15 +134,15 @@
 
     [ "r1:2",   "led1:A", "#8f4814", [ "h1" ] ],
 
-    [ "uno:0",    "r8:1", "#3344BB", [ "h18", "v1" ] ],
+    [ "uno:0",    "r8:1", "#3344BB", [ "h14", "v1" ] ],
 
-    [ "uno:1",    "r1:1", "#8f4814", [ "h22", "v1" ] ],
+    [ "uno:1",    "r1:1", "#8f4814", [ "h19", "v1" ] ],
 
-    [ "uno:2",    "r2:1", "red", [ "h26", "v1" ] ],
+    [ "uno:2",    "r2:1", "red", [ "h24", "v1" ] ],
 
-    [ "uno:3",    "r3:1", "orange", [ "h30", "v20" ] ],
+    [ "uno:3",    "r3:1", "orange", [ "h28", "v20" ] ],
 
-    [ "uno:4",    "r4:1", "yellow", [ "h34", "v1" ] ],
+    [ "uno:4",    "r4:1", "yellow", [ "h32", "v1" ] ],
 
     [ "uno:5",    "r5:1", "limegreen", [ "h-12", "v1" ] ],
 
