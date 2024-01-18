@@ -113,20 +113,21 @@ blvmain:
 
 /* blink D0, the hard way */
 
+  push  r24  /* previously unnecessary but now changing r24 immediately */
+  push  r25
+  ldi   r24, 0x10 /* 16 blinks - subloop counter */
+1:
+  push  r24
   call  pd0_ONb
   call  delay_ms
   call  pd0_OFFb
   call  delay_8ms
 
-  call  pd0_ONb
-  call  delay_ms
-  call  pd0_OFFb
-  call  delay_8ms
-
-  call  pd0_ONb
-  call  delay_ms
-  call  pd0_OFFb
-  call  delay_8ms
+  pop   r24
+  sbiw  r24, 1
+  brne  1b
+  pop   r25
+  pop   r24
 
   call  pd1_ONb
   call  delay_ms
@@ -176,7 +177,6 @@ blvmain:
   call  delay_8ms
 
   call  delay_8ms
-
   call  delay_ms
   ret
 
@@ -205,12 +205,11 @@ delay_pms:
   ret
 
 guadar:
-  ldi  r24, 0x03
+  ldi  r24, 0x3 /* loop count initializer */
 1:
-  push  r24
-  call  blvmain
-  call  delay_pms
-  pop   r24 /* restore r24 after delay_pms */
+  push  r24 /* retain value of loop counter after it decrements */
+  call  blvmain /* main program payload */
+  pop   r24
   sbiw  r24, 1
   brne  1b
   ret
@@ -226,7 +225,7 @@ vmain:
   pop   r31
   pop   r30
   pop   r25
-  pop   r24
+  pop   r24  /* TODO  rule:  pop r24 always the last pop */
   ret
 
 /* end */

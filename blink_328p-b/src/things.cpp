@@ -1,6 +1,6 @@
-/* wa1tnr Wed 17 Jan 11:39:43 UTC 2024 */
+/* wa1tnr Thu 18 Jan 11:12:08 UTC 2024 */
 
-/* Wed 17 Jan 11:39:43 UTC 2024 */
+/* Thu 18 Jan 11:12:08 UTC 2024 */
 
 #include <Arduino.h>
 
@@ -38,14 +38,13 @@ void end_serial(void) { Serial.end(); }
 
 void setup(void) {
     setup_serial();
-    Serial.print(  "  DERMILGAN DRONQUE, GMBH   Wed 17 Jan 11:39:43 UTC 2024");
-    Serial.println("  firestorm mister hawke - firestorm");
+    Serial.print(  "  SILVERFOOT BROTHERS, GMBH   Thu 18 Jan 11:12:08 UTC 2024");
+    Serial.println("  you tell raphael -- c.f. being there");
 
     Serial.println("");
     Serial.print("                                           ");
     Serial.print("dot when TX/RX LEDs OFF - equals when they are ON\r\n");
     Serial.print("\r\n  ");
-    Serial.println("OBLIT comment was here                 ... more likely, now.  Have a temporary fix already.");
     Serial.println("");
     Serial.print("     ... in setup();");
     Serial.print("  start(); ");
